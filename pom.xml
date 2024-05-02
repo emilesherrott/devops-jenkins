@@ -29,7 +29,9 @@
 		<surefire.version>2.22.1</surefire.version>
 		<failsafe.version>2.22.1</failsafe.version>
 
-		<jacoco.version>0.8.3</jacoco.version>
+		<!-- NEW -->
+		<jacoco.version>0.8.11</jacoco.version>
+		<!-- <jacoco.version>0.8.3</jacoco.version> -->
 		<jacoco.path>${settings.localRepository}/org/jacoco/org.jacoco.agent/${jacoco.version}/org.jacoco.agent-${jacoco.version}-runtime.jar</jacoco.path>
 		<jacoco.utReport>${project.build.directory}/jacoco.exec</jacoco.utReport>
 		<jacoco.itReport>${project.build.directory}/jacoco-it.exec</jacoco.itReport>
@@ -41,14 +43,26 @@
 
 	<dependencies>
 
+		<!-- NEW -->
+		<dependency>
+			<groupId>org.apache.groovy</groupId>
+			<artifactId>groovy</artifactId>
+			<version>4.0.11</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- <version>3.2.1</version> -->
+			<!-- NEW -->
+			<version>3.1.5</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<!-- NEW -->
+			<!-- <version>3.1.5</version> -->
 		</dependency>
 
 		<dependency>
@@ -60,6 +74,9 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
+			<!-- <version>2.2.224</version> -->
+			<!-- NEW -->
+			<version>2.1.214</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -85,6 +102,8 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<!-- NEW -->
+			<!-- <version>3.1.5</version> -->
 			<scope>test</scope>
 		</dependency>
 		<!-- Add ons -->
@@ -99,6 +118,7 @@
 			<artifactId>cucumber-spring</artifactId>
 			<version>4.2.0</version>
 			<scope>test</scope>
+			
 		</dependency>
 		<dependency>
 			<groupId>io.cucumber</groupId>
