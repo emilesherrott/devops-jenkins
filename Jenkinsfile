@@ -12,6 +12,12 @@ pipeline {
                 echo "Build Number: $env.BUILD_NUMBER"
                 // Whats the build id
                 echo "Build ID: $env.BUILD_ID"
+                // What"s the build tag
+                echo "Build Tag: $env.BUILD_TAG"
+                // What"s the build url
+                echo "Build URL: $env.BUILD_URL"
+                // What"s the job name
+                echo "Job Name: $env.JOB_NAME"
             }
         }
         stage('Test') {
