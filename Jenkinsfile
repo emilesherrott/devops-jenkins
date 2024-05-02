@@ -54,15 +54,15 @@ pipeline {
 			}
 		}
 		stage('Push Docker Image'){
-   			 steps {
+   			steps {
                 script {
-					docker.withRegistry('', 'dockerhub')
-                    dockerImage.push()
-                    dockerImage.push('latest')
+					docker.withRegistry('', 'dockerhub') {
+                        dockerImage.push()
+                        dockerImage.push('latest')
+                    }
+   				}
+		    }
         }
-   				   }
-		}
-    }
     post {
         always {
             echo 'I always run'
