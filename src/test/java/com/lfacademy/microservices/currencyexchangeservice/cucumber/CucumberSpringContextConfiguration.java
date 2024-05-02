@@ -1,11 +1,11 @@
-package com.in28minutes.microservices.currencyexchangeservice.cucumber;
+package com.lfacademy.microservices.currencyexchangeservice.cucumber;
 
 import org.springframework.boot.test.context.SpringBootContextLoader;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.in28minutes.microservices.currencyexchangeservice.CurrencyExchangeServiceApplicationH2;
+import com.lfacademy.microservices.currencyexchangeservice.CurrencyExchangeServiceApplicationH2;
 
 import cucumber.api.java.Before;
 
